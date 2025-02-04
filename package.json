@@ -1,0 +1,23 @@
+{
+  "name": "expensetracker",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node expense-backend/server.js",
+    "server": "nodemon expense-backend/server.js",
+    "client": "npm start --prefix expense-front",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "GNRTRREX",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9"
+  }
+}
