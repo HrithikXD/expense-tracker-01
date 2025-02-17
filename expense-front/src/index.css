@@ -21,3 +21,10 @@ footer{
   color: white; */
   text-align: center;
 }
+
+.current-month{
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}

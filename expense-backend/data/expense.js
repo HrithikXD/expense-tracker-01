@@ -1,33 +1,28 @@
 const expenses = [
     {
-        id: 1,
+        category: 'Housing',
         description: 'Rent',
         amount: 10000,
-        date: '2025-02-01'
     },
     {
-        id: 2,
+        category: 'Housing',
         description: 'Grocery',
         amount: 500,
-        date: '2025-02-02'
     },
     {
-        id: 3,
+        category: 'Housing',
         description: 'Car Insurance',
         amount: 10000,
-        date: '2025-01-03'
     },
     {
-        id: 4,
+        category: 'Housing',
         description: 'Electricity',
         amount: 1000,
-        date: '2025-01-04'
     },
     {
-        id: 5,
+        category: 'Housing',
         description: 'Internet',
         amount: 500,
-        date: '2025-01-05'
     }
 ]
 

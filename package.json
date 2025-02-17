@@ -8,12 +8,20 @@
     "start": "node expense-backend/server.js",
     "server": "nodemon expense-backend/server.js",
     "client": "npm start --prefix expense-front",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node expense-backend/seeder.js",
+    "data:destroy": "node expense-backend/seeder.js -d",
+    "build" : "npm install && npm install --prefix expense-front && npm run build --prefix expense-front"
   },
   "author": "GNRTRREX",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.21.2"
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.7"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",

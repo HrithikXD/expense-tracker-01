@@ -17,9 +17,8 @@ const ExpenseHistory= () => {
 
   return (
     <>
-    <h5>Track your</h5>
-    <h2>Spendings</h2>
-    <p>Expense History</p>
+    <h6>track your</h6>
+    <h4>Expense History</h4>
     <Row>
       {expenses.map(expense => (
         <Col key={expense._id} sm={12} md={6} lg={4} xl={3}>
