@@ -13,13 +13,16 @@ import { useNavigate } from 'react-router-dom'
 
 const HomeScreen = () => {
   // const [expenses, setExpenses] = useState([]);
-  const {data : expenses, isLoading, error, refetch} = useGetExpensesQuery()
   const [createExpense, { isLoading: loadingCreate }] = 
   useAddNewExpenseMutation()
   const [updateExpense, {isLoading:loadingUpdate}] = useUpdateExpenseMutation()
   const [deleteExpense, {isLoading:loadingDelete}] = 
   useDeleteExpenseMutation()
   const {userInfo} = useSelector((state) => state.auth)
+  
+  const {data : expenses, isLoading, error, refetch} = useGetExpensesQuery(undefined, {
+    skip : !userInfo
+  })
 
   // const dispatch = useDispatch();   
   const navigate = useNavigate()
