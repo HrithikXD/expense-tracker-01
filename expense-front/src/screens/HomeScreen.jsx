@@ -47,7 +47,7 @@ const HomeScreen = () => {
     else{
       navigate('/expense-login')
     }
-  }, [month, del, ed, expenses, userInfo])
+  }, [month, del, ed, expenses, userInfo, navigate])
 
 
   const delEx = async (id)=>{
