@@ -20,11 +20,11 @@ const AIInput = () => {
         body: JSON.stringify({ text: input }),
       });
 
-      const aiData = await aiResponse.json();
+      // const aiData = await aiResponse.json();
 
       // Extract structured data (Example: { amount, category, description })
-      const { amount, category, description } = aiData;
-      console.log(aiData)
+      // const { amount, category, description } = aiData;
+      // console.log(aiData)
     //   // Send the processed expense data to backend API
     //   const expenseResponse = await fetch("/api/expenses", {
     //     method: "POST",

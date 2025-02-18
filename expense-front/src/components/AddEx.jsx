@@ -3,7 +3,6 @@ import { useForm, Controller } from 'react-hook-form';
 import { Form, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import {useNavigate} from 'react-router-dom'
-import { addToExpense } from '../slices/expensesSlice';
 
 const AddEx = ({ setAd, createExpenseHandler }) => {
 
