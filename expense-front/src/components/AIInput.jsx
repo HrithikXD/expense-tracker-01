@@ -14,11 +14,11 @@ const AIInput = () => {
 
     try {
       // Call Gen AI API to process the expense text
-      const aiResponse = await fetch("/api/gen-ai-process", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: input }),
-      });
+      // const aiResponse = await fetch("/api/gen-ai-process", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ text: input }),
+      // });
 
       // const aiData = await aiResponse.json();
 

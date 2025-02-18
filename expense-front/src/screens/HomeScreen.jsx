@@ -11,10 +11,10 @@ import { useNavigate } from 'react-router-dom'
 
 const HomeScreen = () => {
   // const [expenses, setExpenses] = useState([]);
-  const [createExpense, { isLoading: loadingCreate }] = 
+  const [createExpense] = 
   useAddNewExpenseMutation()
-  const [updateExpense, {isLoading:loadingUpdate}] = useUpdateExpenseMutation()
-  const [deleteExpense, {isLoading:loadingDelete}] = 
+  const [updateExpense] = useUpdateExpenseMutation()
+  const [deleteExpense] = 
   useDeleteExpenseMutation()
   const {userInfo} = useSelector((state) => state.auth)
   

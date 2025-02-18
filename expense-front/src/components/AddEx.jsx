@@ -1,13 +1,9 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Form, Button, Container, Row, Col, Card } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
-import {useNavigate} from 'react-router-dom'
 
 const AddEx = ({ setAd, createExpenseHandler }) => {
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const {handleSubmit,control,formState: { errors },} = useForm({
     defaultValues: {
