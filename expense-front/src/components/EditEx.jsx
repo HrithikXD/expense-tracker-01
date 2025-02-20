@@ -21,6 +21,9 @@ const EditEx = ({ setEd, curData, updateExpense }) => {
   };
 
   return (
+    <div className='blur-background'>
+
+    
     <Container className="mt-4">
       <Row className="justify-content-center">
         <Col md={6}>
@@ -96,10 +99,10 @@ const EditEx = ({ setEd, curData, updateExpense }) => {
 
                 {/* Buttons */}
                 <div className="d-grid gap-2">
-                  <Button variant="primary" type="submit">
+                  <Button variant="dark" type="submit">
                     Submit
                   </Button>
-                  <Button variant="secondary" onClick={() => setEd(false)}>
+                  <Button variant="outline-dark" onClick={() => setEd(false)}>
                     Cancel
                   </Button>
                 </div>
@@ -109,6 +112,7 @@ const EditEx = ({ setEd, curData, updateExpense }) => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 

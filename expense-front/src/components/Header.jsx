@@ -25,7 +25,7 @@ const Header = () => {
         try {
             await logoutApiCall().unwrap()
             dispatch(logout());
-            toast.error('Logged Out')
+            toast.dark('Logged Out')
             navigate('/expense-login')
         } catch (err) {
             toast.error(err?.data?.message || err.error)

@@ -40,12 +40,12 @@ const LoginScreen = () => {
             if(!isRegister){
                 const res = await login({email, password}).unwrap();
                 dispatch(setCredentials({...res, }))
-                toast.success('Logged In')
+                toast.dark('Logged In')
             }
             else{
                 const res = await register({name, email, password}).unwrap();
                 dispatch(setCredentials({...res, }))
-                toast.success('Registered')
+                toast.dark('Registered')
             }
             navigate(redirect)
         } catch (err) {
@@ -90,14 +90,14 @@ const LoginScreen = () => {
                     onChange={(e)=> setPassword(e.target.value)}
                  ></Form.Control>
             </FormGroup>
-            <Button type='submit' variant='primary' className='my-3' disabled = {loadingLogin || loadingRegister}>
+            <Button type='submit' variant='dark' className='my-3' disabled = {loadingLogin || loadingRegister}>
                 {!isRegister ? 'Login' : 'Register'}
             </Button>
           </Form>
           <h6 className='mt-3'>
             {isRegister? 'Existing User? Login from here' : 'New User? Register from here' }
           </h6>
-          <Button variant='outline-primary' className='my-3' disabled = {loadingLogin || loadingRegister} onClick={()=>setIsRegister(!isRegister)}>
+          <Button variant='outline-dark' className='my-3' disabled = {loadingLogin || loadingRegister} onClick={()=>setIsRegister(!isRegister)}>
           {isRegister ? 'Login' : 'Register'}
           </Button>
     </FormContainer>

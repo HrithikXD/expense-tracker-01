@@ -56,7 +56,7 @@ const AIInput = () => {
             onChange={(e) => setInput(e.target.value)}
             disabled={loading}
           />
-          <Button variant="primary" type="submit" disabled={true}>
+          <Button variant="dark" type="submit" disabled={true}>
             {loading ? "Processing..." : "Submit"}
           </Button>
         </InputGroup>

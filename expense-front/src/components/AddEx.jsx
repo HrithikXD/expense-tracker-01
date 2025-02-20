@@ -20,8 +20,9 @@ const AddEx = ({ setAd, createExpenseHandler }) => {
   };
 
   return (
-    <Container className="mt-4">
-      <Row className="justify-content-center">
+    <div className='blur-background'>
+    <Container className="mt-4 addExOut addEx">
+      <Row className="justify-content-center addEx">
         <Col md={6}>
           <Card>
             <Card.Body>
@@ -95,10 +96,10 @@ const AddEx = ({ setAd, createExpenseHandler }) => {
 
                 {/* Buttons */}
                 <div className="d-grid gap-2">
-                  <Button variant="primary" type="submit">
+                  <Button variant="outline-dark" type="submit">
                     Submit
                   </Button>
-                  <Button variant="secondary" onClick={() => setAd(false)}>
+                  <Button variant="dark" onClick={() => setAd(false)}>
                     Cancel
                   </Button>
                 </div>
@@ -108,6 +109,7 @@ const AddEx = ({ setAd, createExpenseHandler }) => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 

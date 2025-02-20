@@ -32,23 +32,25 @@ const Expense = ({expense,
 
       {/* Edit and Delete Buttons */}
       {!del && !ed &&(<div className="d-flex flex-column gap-2">
-        <Button variant="primary" size="sm" onClick={() =>{ setEd(true)
+        <Button variant="dark" size="sm" onClick={() =>{ setEd(true)
           setCurid(expense._id)
         }}>
           <FaEdit />
         </Button>
-        <Button variant="danger" size="sm" onClick={() =>{ setDel(true)
+        <Button variant="outline-dark" size="sm" onClick={() =>{ setDel(true)
           setCurid(expense._id)
         }}>
           <FaBroom />
         </Button>
       </div>)}
       {del && expense._id === curid && (
+        <div className='blur-background'>
           <div className="d-flex flex-column gap-2">
           Confirm Delete
-          <Button variant="danger" size="sm" onClick={()=>onDel(expense._id)}>Yes</Button>
-          <Button variant="primary" size="sm" onClick={()=> setDel(false)}>No</Button>
+          <Button variant="dark" size="lg" onClick={()=>onDel(expense._id)}>Yes</Button>
+          <Button variant="outline-dark" size="lg" onClick={()=> setDel(false)}>No</Button>
           </div>
+        </div>
         )}
         {ed && expense._id === curid && (<EditEx curData={expense} setEd={setEd} updateExpense = {updateExpense}/>)}
     </div>

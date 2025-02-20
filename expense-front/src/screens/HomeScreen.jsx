@@ -95,8 +95,12 @@ const HomeScreen = () => {
       </div>
     ) : (
       <>
+      <div className='pageHead'>
+
       <h6>track your</h6>
     <h4>Spendings</h4>
+      </div>
+      <div className='inputMonth p-3'>
     <AIInput/>
     <Row className="align-items-center justify-content-between p-3 mt-3">
         {/* Month and Total Expense */}
@@ -118,14 +122,18 @@ const HomeScreen = () => {
         </Col>
         <Col xs="auto" className="text-center text-md-end">
         {!ad && (
-          <Button variant="primary" size="sm" onClick={()=>setAd(true)}>Add</Button>
+          <Button variant="dark" size="sm" onClick={()=>setAd(true)}>Add</Button>
         )}
         {ad && (
           <AddEx setAd = {setAd} createExpenseHandler={createExpenseHandler}/>
         )}
         </Col>
       </Row>
+      </div>
       {totalExpense > 0 ? (
+        <div className='mainCard'>
+
+     
     <Row>
       {expenses
       ?.filter(expense => {
@@ -145,7 +153,8 @@ const HomeScreen = () => {
             />
         </Col>
       ))}
-      </Row>) : (
+      </Row>
+      </div>) : (
         <h4>No expenses found</h4>
       )
     }
